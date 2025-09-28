@@ -16,11 +16,11 @@ const formatDate = (date) => {
     if (diff < 3600 * 24 * 30 * 12) {
         return Math.floor(diff / (3600 * 24 * 30)) + " months ago";
     }
-    const return_string = Math.floor(diff / (3600 * 24 * 30 * 12)) + " years ago";
-    if (return_string === "NaN years ago") {
+    const years = Math.floor(diff / (3600 * 24 * 30 * 12));
+    if (isNaN(years)) {
         return "Just now";
     } else {
-        return return_string;
+        return years + " years ago";
     }
 };
 
