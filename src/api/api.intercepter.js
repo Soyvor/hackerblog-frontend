@@ -55,7 +55,7 @@ api.interceptors.response.use(
             }).catch((err) => {
                 console.error('Error refreshing token:', err);
                 localStorage.removeItem('token');
-                localStorage.removeItem('refreshToken');
+                localStorage.removeItem('refresh');
                 window.location.reload();
             });
         }
