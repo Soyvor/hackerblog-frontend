@@ -26,8 +26,8 @@ const formatDate = (date) => {
 
 function localizeDateStr(date_to_convert) {
     const date = new Date(date_to_convert);
-    const local_date = new Date(date + "UTC");
-    return local_date.toString();
+    // Return the local time string representation of the date
+    return date.toLocaleString();
 }
 
 export { formatDate, localizeDateStr };
